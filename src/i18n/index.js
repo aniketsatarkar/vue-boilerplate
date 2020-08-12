@@ -5,7 +5,7 @@ import en from '@/i18n/en'
 Vue.use(VueI18n)
 
 const messages = {
-  'en': en, 
+  en: en
 }
 
 const i18n = new VueI18n({

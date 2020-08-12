@@ -6,7 +6,7 @@
 import axios from 'axios'
 
 const service = axios.create({
-  baseURL: '',  // API base url here.
+  baseURL: '', // API base url here.
   timeout: 30000 // request timeout 30 seconds
 })
 
@@ -15,10 +15,9 @@ const service = axios.create({
 */
 service.interceptors.request.use(
   config => {
-
     // set required headers for request here
     // config.headers['Content-Type'] = null
-    
+
     return config
   },
   error => {
@@ -31,13 +30,11 @@ service.interceptors.request.use(
 */
 service.interceptors.response.use(
   response => {
-    
     // handle response data pre-processinge here
 
     return response
   },
   error => {
-    
     // handle api request errors here
 
     return Promise.reject(error)
